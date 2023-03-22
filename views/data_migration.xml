@@ -1,0 +1,36 @@
+<odoo>
+    <record id="data_fetch_action" model="ir.actions.act_window">
+        <field name="name">Data Migrate</field>
+        <field name="res_model">data.migrate</field>
+        <field name="view_mode">form</field>
+    </record>
+    <record id="data_migrate_form" model="ir.ui.view">
+        <field name="name">Data Migrate Form</field>
+        <field name="model">data.migrate</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="source_db"/>
+                            <field name="source_db_user"/>
+                            <field name="source_db_pwd"/>
+                            <field name="source_db_url"/>
+                        </group>
+                        <group>
+                            <field name="destination_db"/>
+                            <field name="destination_db_user"/>
+                            <field name="destination_db_pwd"/>
+                            <field name="destination_db_url"/>
+                        </group>
+                    </group>
+                        <center>
+                            <button name="action_fetch_data"
+                                    class="oe_highlight"
+                                    string="FETCH" type="object"/>
+                        </center>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

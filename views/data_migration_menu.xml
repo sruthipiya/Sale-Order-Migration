@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem id="data_migration_menu_root" name="Data Migrate"/>
+    <menuitem id="data_fetch_details_menu" name="Data Fetch"
+              parent="data_migration_menu_root"/>
+    <menuitem id="data_fetch_view_action" name="Fetch Data"
+              action="data_fetch_action"
+              parent="data_fetch_details_menu"/>
+</odoo>
